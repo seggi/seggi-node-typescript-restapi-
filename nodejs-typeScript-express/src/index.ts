@@ -6,7 +6,7 @@ import { createConnections } from 'typeorm';
 
 // Routes
 import IndexRoutes from './routes/index.routes';
-// import PostRoutes from './routes/post.routes';
+import AuthRoutes from './routes/auth.routes';
 import UserRoutes from "./routes/users.routes";
 
 
@@ -38,6 +38,7 @@ export class App {
         this.app.use(IndexRoutes);
         // this.app.use('/posts',PostRoutes);
         this.app.use('/api', UserRoutes)
+        this.app.use('/auth', AuthRoutes)
     }
 
     async listen() {
