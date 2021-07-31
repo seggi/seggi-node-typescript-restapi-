@@ -5,7 +5,8 @@
   "main": "app.js",
   "scripts": {
     "build": "tsc",
-    "dev": "nodemon src/app.ts --exec ts-node"
+    "start": "node dist/app.js",
+    "dev": "tsc-watch  --onSuccess \"node dist/app.js\" "
   },
   "author": "nankim",
   "license": "ISC",
@@ -15,11 +16,17 @@
     "@types/mysql2": "github:types/mysql2",
     "nodemon": "^2.0.12",
     "ts-node": "^10.1.0",
+    "tsc-watch": "^4.4.0",
     "typescript": "^4.3.5"
   },
   "dependencies": {
+    "@types/cors": "^2.8.12",
+    "cors": "^2.8.5",
     "express": "^4.17.1",
     "morgan": "^1.10.0",
-    "mysql2": "^2.2.5"
+    "mysql2": "^2.2.5",
+    "node": "^16.6.0",
+    "reflect-metadata": "^0.1.13",
+    "typeorm": "^0.2.35"
   }
 }

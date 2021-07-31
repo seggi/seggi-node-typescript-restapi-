@@ -1,8 +1,8 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const index_js_1 = require("./index.js");
+const index_1 = require("./index");
 async function main() {
-    const app = new index_js_1.App();
+    const app = new index_1.App(3000);
     await app.listen();
 }
 main();
